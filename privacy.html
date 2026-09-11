@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — DarkDeepWeb</title>
+<meta name="description" content="Privacy policy for DarkDeepWeb: no accounts, no analytics, no servers of ours. Traffic goes through Tor and the AI runs on your device.">
+<style>
+  :root{
+    --bg:#1C1B22; --surface:#2B2A33; --elev:#36353F; --stroke:#42414D;
+    --text:#FBFBFE; --text2:#B6B3C2; --text3:#8A8796;
+    --accent:#A87BE0; --accent2:#7D4698; --ok:#7FC240; --warn:#E8A33D;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#FFFFFF; --surface:#F6F3FA; --elev:#FFFFFF; --stroke:#E5E0EE;
+      --text:#1C1B22; --text2:#554E68; --text3:#857F94;
+      --accent:#7D4698; --accent2:#59316B; --ok:#4E8B22; --warn:#A66A15;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:56px 22px 96px}
+  .mark{font-weight:800;font-size:15px;letter-spacing:-.2px}
+  .mark span{background:linear-gradient(135deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  h1{font-size:34px;line-height:1.15;letter-spacing:-.8px;margin:26px 0 10px;font-weight:800}
+  .lede{color:var(--text2);font-size:17px;margin:0 0 8px}
+  .updated{color:var(--text3);font-size:13px;margin:0 0 36px}
+  h2{font-size:19px;margin:38px 0 10px;font-weight:700;letter-spacing:-.2px}
+  p{margin:0 0 14px;color:var(--text2)}
+  p strong{color:var(--text)}
+  ul{margin:0 0 16px;padding-left:20px;color:var(--text2)}
+  li{margin:0 0 8px}
+  .card{background:var(--surface);border:1px solid var(--stroke);border-radius:16px;padding:18px 20px;margin:0 0 20px}
+  .card.good{border-color:color-mix(in srgb,var(--ok) 40%,var(--stroke))}
+  .card.warn{border-color:color-mix(in srgb,var(--warn) 45%,var(--stroke))}
+  .card h3{margin:0 0 8px;font-size:16px;font-weight:700;color:var(--text)}
+  .pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;
+    color:var(--text2);background:var(--elev);border:1px solid var(--stroke);
+    border-radius:999px;padding:6px 12px;margin:0 6px 8px 0}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+  a:hover{border-bottom-color:var(--accent)}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--stroke);color:var(--text3);font-size:13px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;
+    background:var(--elev);border:1px solid var(--stroke);border-radius:6px;padding:1px 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">Dark<span>Deep</span>Web</div>
+
+  <h1>Privacy Policy</h1>
+  <p class="lede">Short version: the app has no accounts, no analytics, no advertising, and no servers of ours. Traffic goes through the Tor network and the AI runs on your phone.</p>
+  <p class="updated">Last updated 11 September 2026</p>
+
+  <div class="card good">
+    <span class="pill"><span class="dot"></span> No account required</span>
+    <span class="pill"><span class="dot"></span> No analytics or tracking SDKs</span>
+    <span class="pill"><span class="dot"></span> No data sent to us — ever</span>
+    <span class="pill"><span class="dot"></span> Routed through Tor</span>
+    <span class="pill"><span class="dot"></span> Model runs on device</span>
+  </div>
+
+  <h2>What we collect</h2>
+  <p><strong>Nothing.</strong> DarkDeepWeb has no backend. We operate no server that receives your searches, the pages you visit, your questions, or any identifier. We cannot see what you do in the app, because none of it reaches us.</p>
+
+  <h2>How your traffic reaches the internet</h2>
+  <p>Every request the browser makes — pages, searches, images, scripts, even site icons — is sent through the <strong>Tor network</strong> by a Tor daemon running inside the app. Tor relays each request through three volunteer-run computers chosen at random. The first knows your device but not where the request is going; the last knows where it is going but not who sent it. No single relay knows both.</p>
+  <p>This means the websites you visit see a Tor exit relay's address, not yours. It also means your internet provider can see that you are using Tor, but not which sites you open.</p>
+  <p>Nothing loads until Tor is connected. If the connection drops, requests fail — the app does not quietly fall back to an ordinary connection.</p>
+
+  <h2>What stays on your device</h2>
+  <p>The following is stored locally, in the app's own container, and is deleted when you delete the app:</p>
+  <ul>
+    <li><strong>Recent searches and recently opened pages</strong> — shown on the home screen. Clear them any time in Settings → Data → Delete browsing data.</li>
+    <li><strong>Your settings</strong> — search engine, security level, appearance, AI toggles.</li>
+    <li><strong>Per-site exceptions</strong> you have granted, listed in Settings → Site settings.</li>
+    <li><strong>API keys</strong>, if you connect a cloud AI service (see below).</li>
+    <li><strong>Tor's network cache</strong> — the public list of relays. It contains nothing about you or where you went.</li>
+    <li><strong>The language model</strong> — bundled inside the app.</li>
+  </ul>
+  <p><strong>Cookies, caches and site storage are never written to disk.</strong> They live in memory only and are gone when the app closes, the way Tor Browser treats a session. "New identity" clears all of it plus every Tor circuit in one step, so nothing links what you do next to what you did before.</p>
+
+  <h2>How the AI works</h2>
+  <p>The app ships with a Llama 3.2 1B model that runs entirely on your device through llama.cpp. When it summarises search results or answers a question about a page, that computation happens on your phone. The text never leaves it, and it never touches the Tor network either — because it never goes anywhere.</p>
+  <p>When you tap the assistant on a page, the app reads that page to answer well: the text the publisher provides, and — if "Read the screen too" is on — a screenshot of the current view analysed with Apple's on-device Vision framework for text recognition, scene labels and face <em>detection</em> (counting faces present; no attempt is made to identify anyone). Both are used only to form the prompt for the on-device model. Screenshots are never stored and never uploaded.</p>
+
+  <h2>If you connect a cloud AI service</h2>
+  <div class="card warn">
+    <h3>This is the one part of the app that does not go through Tor</h3>
+    <p style="margin:0">It is optional, off by default, and used only while you have it selected. If you turn it on, you should assume the provider learns both what you sent and where you are.</p>
+  </div>
+  <p>If you enter an API key for a provider such as Gemini, ChatGPT, Claude, Groq, Mistral, DeepSeek or Qwen — or configure your own endpoint — then <strong>while that engine is selected</strong>, your questions and the relevant page or search text are sent from your device directly to that provider so it can answer.</p>
+  <ul>
+    <li>The request is made over an ordinary internet connection, <strong>not through Tor</strong>. Routing a streaming model response through three relays is slow enough to be unusable, and this is your choice to make — so the app makes it explicitly rather than pretending otherwise.</li>
+    <li>That provider therefore sees your IP address as well as the text you sent.</li>
+    <li>The request goes straight to the provider. It does not pass through us.</li>
+    <li>Your key is stored only on your device and sent only to that provider.</li>
+    <li>The app names the engine in use on the home screen and in Settings.</li>
+    <li>Switch back to the on-device model at any time and nothing leaves the phone again.</li>
+  </ul>
+  <p>Data you send to a third-party provider is governed by that provider's privacy policy, not this one.</p>
+
+  <h2>Searching the web</h2>
+  <p>Searching sends your query — through Tor — to the engine you have selected: DuckDuckGo, DuckDuckGo's onion service, Ahmia, Onion Search (which asks Ahmia and DuckDuckGo Onion in turn), or one you configure yourself. Opening a result loads that website, also through Tor. This is ordinary browsing: those services receive the request from a Tor exit relay and handle it under their own policies. We add nothing to it and receive no copy.</p>
+  <p>Choosing an onion service — DuckDuckGo Onion, Ahmia or Onion Search — means the request never leaves the Tor network at all, so no exit relay is involved.</p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><strong>Microphone and speech recognition</strong> — only while you hold the mic button, to turn speech into a search or a question. Transcription is forced to run <strong>on the device</strong>; audio is never sent to Apple or anyone else. On a device that cannot transcribe locally, the mic button is not offered.</li>
+  </ul>
+  <p>The app requests no location, contacts, photos or camera access, and it refuses camera and microphone requests from web pages outright rather than prompting you. Websites cannot send you notifications — the browser engine has no support for it.</p>
+
+  <h2>Children</h2>
+  <p>The app is a web browser and displays whatever the web returns, including content reached over the Tor network. It is rated 17+, is not directed at children, and collects no information from anyone.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the revised version will be posted here with a new date. Material changes will also be noted in the App Store release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy: <a href="mailto:sivavimelrajhen@gmail.com">sivavimelrajhen@gmail.com</a></p>
+
+  <footer>
+    Tor and the Onion Logo are registered trademarks of The Tor Project, Inc. This app is an
+    independent project, not produced by, endorsed by, or affiliated with The Tor Project, Inc.<br><br>
+    Built with Llama. Llama 3.2 is licensed under the Llama 3.2 Community License,
+    Copyright © Meta Platforms, Inc. All Rights Reserved.
+  </footer>
+</div>
+</body>
+</html>
